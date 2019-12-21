@@ -49,9 +49,7 @@ function Loot.click( k, s )
 					end
 
 				end
-
-			elseif ( k == "mouse2" ) then
-
+				
 			end
 
 		end
