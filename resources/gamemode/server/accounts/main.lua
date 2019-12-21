@@ -40,8 +40,6 @@ end
 
 function Accounts.create( player )
 
-	outputChatBox( "Gerando conta!", player, 0, 255, 255 );
-
 	local random_position = random( maxn( SPAWN_POSITIONS ) );
 
 	exec( "INSERT INTO accounts ( serial, clothes, position, rotation, life, hunger, thirst ) VALUES ( ?, ?, ?, ?, ?, ?, ? )",
