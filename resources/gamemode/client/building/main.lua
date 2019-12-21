@@ -75,12 +75,6 @@ function Building.setup( )
 
 	} );
 
-	Building.UI.actions[ 1 ]:addAction( {
-
-		name = "Others"
-
-	} );
-
 	addEventHandler( "building > toggle", root, Building.toggle );
 	addEventHandler( "onClientUIClick", Building.UI.actions[ 1 ].source, Building.actionClick );
 
