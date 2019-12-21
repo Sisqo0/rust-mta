@@ -1,0 +1,127 @@
+<meta>
+
+    <info author="STR6" />
+
+    <oop>true</oop>
+
+    <script src="shared/speed.lua" type="shared" />
+    <script src="shared/functions.lua" type="shared" />
+    <script src="shared/custom_models.lua" type="shared" />
+    <script src="shared/building.lua" type="shared" />
+    <script src="shared/spawn_positions.lua" type="shared" />
+    <script src="shared/loot_positions.lua" type="shared" />
+    <script src="shared/inventory.lua" type="shared" />
+
+    <script src="client/starter.lua" type="client" cache="false" />
+
+    <script src="client/ui/generate_ui.lua" type="client" cache="false" />
+    <script src="client/ui/framework/render.lua" type="client" cache="false" />
+    <script src="client/ui/framework/usefull.lua" type="client" cache="false" />
+    <script src="client/ui/framework/buttons.lua" type="client" cache="false" />
+    <script src="client/ui/framework/rectangles.lua" type="client" cache="false" />
+    <script src="client/ui/framework/images.lua" type="client" cache="false" />
+    <script src="client/ui/framework/labels.lua" type="client" cache="false" />
+    <script src="client/ui/framework/radios.lua" type="client" cache="false" />
+    <script src="client/ui/framework/action.lua" type="client" cache="false" />
+
+    <script src="client/models/main.lua" type="client" cache="false" />
+    <script src="client/building/main.lua" type="client" cache="false" />
+    <script src="client/weapons/main.lua" type="client" cache="false" />
+    <script src="client/loot/main.lua" type="client" cache="false" />
+
+    <script src="client/ui/login/main.lua" type="client" cache="false" />
+    <script src="client/ui/login/random_positions.lua" type="client" cache="false" />
+
+    <script src="client/ui/hud/main.lua" type="client" cache="false" />
+
+    <script src="client/ui/inventory/main.lua" type="client" cache="false" />
+    <script src="client/ui/crafting/main.lua" type="client" cache="false" />
+
+    <script src="client/ui/wasted/main.lua" type="client" cache="false" />
+
+    <script src="client/ui/aim/main.lua" type="client" cache="false" />
+
+    <script src="server/overwrite.lua" type="server" />
+    <script src="server/quit.lua" type="server" />
+    <script src="server/starter.lua" type="server" />
+    <script src="server/wasted.lua" type="server" />
+    <script src="server/stop.lua" type="server" />
+    <script src="server/utils.lua" type="server" />
+
+    <script src="server/database/main.lua" type="server" />
+    <script src="server/accounts/main.lua" type="server" />
+    <script src="server/inventory/main.lua" type="server" />
+    <script src="server/inventory/use_item.lua" type="server" />
+    <script src="server/building/main.lua" type="server" />
+    <script src="server/loot/main.lua" type="server" />
+
+    <file src="assets/fonts/regular.ttf" />
+    <file src="assets/fonts/semibold.ttf" />
+    <file src="assets/fonts/bold.ttf" />
+
+    <file src="assets/images/null.png" />
+    <file src="assets/images/background.png" />
+    <file src="assets/images/rec.png" />
+    <file src="assets/images/circle.png" />
+
+    <file src="assets/images/hud/life.png" />
+    <file src="assets/images/hud/thirst.png" />
+    <file src="assets/images/hud/hunger.png" />
+
+    <file src="assets/images/login/banner.png" />
+    <file src="assets/images/items/1.png" />
+    <file src="assets/images/items/2.png" />
+    <file src="assets/images/items/3.png" />
+    <file src="assets/images/items/4.png" />
+    <file src="assets/images/items/5.png" />
+    <file src="assets/images/items/6.png" />
+    <file src="assets/images/items/7.png" />
+    <file src="assets/images/items/8.png" />
+    <file src="assets/images/items/9.png" />
+    <file src="assets/images/items/10.png" />
+    <file src="assets/images/items/11.png" />
+    <file src="assets/images/items/12.png" />
+    <file src="assets/images/items/13.png" />
+    <file src="assets/images/items/14.png" />
+    <file src="assets/images/items/15.png" />
+    <file src="assets/images/items/16.png" />
+    <file src="assets/images/items/17.png" />
+    <file src="assets/images/items/18.png" />
+    <file src="assets/images/items/19.png" />
+
+    <file src="assets/models/build/texture.txd" />
+
+    <file src="assets/models/build/foundation.dff" />
+    <file src="assets/models/build/foundation.col" />
+    <file src="assets/models/build/floor.dff" />
+    <file src="assets/models/build/floor.col" />
+    <file src="assets/models/build/wall.dff" />
+    <file src="assets/models/build/wall.col" />
+    <file src="assets/models/build/walldoor.dff" />
+    <file src="assets/models/build/walldoor.col" />
+    <file src="assets/models/build/wallwindow.dff" />
+    <file src="assets/models/build/wallwindow.col" />
+    <file src="assets/models/build/door.dff" />
+    <file src="assets/models/build/door.col" />
+    <file src="assets/models/build/stair.dff" />
+    <file src="assets/models/build/stair.col" />
+
+    <file src="assets/models/utils/barrel01.dff" />
+    <file src="assets/models/utils/barrel01.col" />
+    <file src="assets/models/utils/barrel01.txd" />
+
+    <file src="assets/models/utils/hammer.dff" />
+    <file src="assets/models/utils/hammer.txd" />
+
+    <file src="assets/models/utils/pickaxe.dff" />
+    <file src="assets/models/utils/pickaxe.txd" />
+
+    <file src="assets/models/utils/axe.dff" />
+    <file src="assets/models/utils/axe.txd" />
+
+    <file src="assets/shaders/color.fx" />
+    <file src="assets/shaders/circle.fx" />
+
+    <min_mta_version server="1.5.6" client="1.5.6" />
+
+</meta>

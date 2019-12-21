@@ -1,0 +1,80 @@
+BUILDING_SIZES = { };
+BUILDING_SIZES[ 1853 ] = {
+
+	x = 5,
+	y = 5,
+	z = 5
+
+};
+
+BUILDING_SIZES[ 1854 ] = {
+
+	x = BUILDING_SIZES[ 1853 ].x,
+	y = BUILDING_SIZES[ 1853 ].y,
+	z = 0.20
+
+};
+
+BUILDING_SIZES[ 1855 ] = {
+
+	x = 0.21,
+	y = 2.5,
+	z = 4
+
+};
+
+BUILDING_SIZES[ 1856 ] = BUILDING_SIZES[ 1855 ];
+BUILDING_SIZES[ 1857 ] = BUILDING_SIZES[ 1855 ];
+
+BUILDING_SIZES[ 1858 ] = {
+
+	x = 0.122,
+	y = 1.295,
+	z = BUILDING_SIZES[ 1853 ].z
+
+};
+
+BUILDING_SIZES[ 1859 ] = {
+
+	x = BUILDING_SIZES[ 1853 ].x,
+	y = BUILDING_SIZES[ 1853 ].y,
+	z = 4
+
+};
+
+BUILDING_RULES = { };
+
+BUILDING_RULES[ 1853 ] = { };
+BUILDING_RULES[ 1853 ][ 1853 ] = "bottom_side";
+BUILDING_RULES[ 1853 ][ 1854 ] = "bottom_side";
+
+BUILDING_RULES[ 1854 ] = { };
+BUILDING_RULES[ 1854 ][ 1854 ] = "bottom_side";
+BUILDING_RULES[ 1854 ][ 1855 ] = "two_side";
+BUILDING_RULES[ 1854 ][ 1856 ] = "two_side";
+BUILDING_RULES[ 1854 ][ 1857 ] = "two_side";
+
+BUILDING_RULES[ 1855 ] = { };
+BUILDING_RULES[ 1855 ][ 1853 ] = "side";
+BUILDING_RULES[ 1855 ][ 1854 ] = "side";
+BUILDING_RULES[ 1855 ][ 1855 ] = "top";
+BUILDING_RULES[ 1855 ][ 1856 ] = "top";
+BUILDING_RULES[ 1855 ][ 1857 ] = "top";
+
+BUILDING_RULES[ 1856 ] = { };
+BUILDING_RULES[ 1856 ][ 1853 ] = "side";
+BUILDING_RULES[ 1856 ][ 1854 ] = "side";
+BUILDING_RULES[ 1856 ][ 1855 ] = "top";
+BUILDING_RULES[ 1856 ][ 1856 ] = "top";
+BUILDING_RULES[ 1856 ][ 1857 ] = "top";
+
+BUILDING_RULES[ 1857 ] = { };
+BUILDING_RULES[ 1857 ][ 1853 ] = "side";
+BUILDING_RULES[ 1857 ][ 1854 ] = "side";
+BUILDING_RULES[ 1857 ][ 1855 ] = "top";
+BUILDING_RULES[ 1857 ][ 1856 ] = "top";
+BUILDING_RULES[ 1857 ][ 1857 ] = "top";
+
+BUILDING_RULES[ 1859 ] = { };
+BUILDING_RULES[ 1859 ][ 1853 ] = "top_center";
+BUILDING_RULES[ 1859 ][ 1854 ] = "top_center";
