@@ -10,7 +10,7 @@ Loot.cols = {
 	trees = { },
 	rocks = { }
 
-}
+};
 
 Loot.barrels_type = {
 
@@ -45,7 +45,7 @@ function Loot.setup( )
 
 		end
 
-	end, 1 * 60000, 0 );
+	end, 15 * 60000, 0 );
 
 end
 
