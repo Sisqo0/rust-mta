@@ -30,7 +30,6 @@
     <script src="client/loot/main.lua" type="client" cache="false" />
 
     <script src="client/ui/login/main.lua" type="client" cache="false" />
-    <script src="client/ui/login/random_positions.lua" type="client" cache="false" />
 
     <script src="client/ui/hud/main.lua" type="client" cache="false" />
 
