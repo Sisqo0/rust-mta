@@ -11,7 +11,7 @@ function Database.setup( )
 
 	if ( not Database.connection ) then
 
-		print( "Falha ao conectar com o banco de dados!" );
+		print( "Failed to connect to database!" );
 		cancelEvent( true );
 
 	end
@@ -43,6 +43,6 @@ function exec( ... )
 
 	end
 
-	return print( "EXECUTION: " .. type( exec_ ) );
+	return print( "EXEC: " .. type( exec_ ) );
 
 end
