@@ -98,10 +98,10 @@ function HUD.createNotification( text, type )
 
 	insert( HUD.notifications, {
 
-		h = ( ( countCharacter( text, "\n" ) + 1 ) * dxGetFontHeight( 1, "clear" ) ) + 10;
+		h = ( ( countCharacter( text, "\n" ) + 1 ) * dxGetFontHeight( 1, "clear" ) ) + 10,
 		text = text,
 		color = HUD.notifications_types[ type ],
-		tick = getTickCount( );
+		tick = getTickCount( )
 
 	} );
 
