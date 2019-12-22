@@ -5,6 +5,7 @@ addEventHandler( "onResourceStop", resourceRoot,
 
 			Accounts.logout( v );
 			v:removeData( "waiting_response" );
+			unbindKey( v, "r", "down", Inventory.reloadWeapon );
 
 		end
 
