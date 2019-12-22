@@ -169,8 +169,8 @@ function areaCollision( )
 			local y = v.y;
 			local z = v.z;
 
-			x = x + math.cos( math.rad( i ) ) * v.r;
-			y = y + math.sin( math.rad( i ) ) * v.r;
+			x = x + cos( rad( i ) ) * v.r;
+			y = y + sin( rad( i ) ) * v.r;
 
 			dxDrawLine3D( x, y, z, x, y, z + Building.areaHeight, tocolor( 0, 255, 0 ), 2 );
 
@@ -184,8 +184,8 @@ function areaCollision( )
 		local y = localPlayer.position.y;
 		local z = localPlayer.position.z;
 
-		x = x + math.cos( math.rad( i ) ) * 20;
-		y = y + math.sin( math.rad( i ) ) * 20;
+		x = x + cos( rad( i ) ) * 20;
+		y = y + sin( rad( i ) ) * 20;
 
 		dxDrawLine3D( x, y, z, x, y, z + Building.areaHeight, Building.isColliding( { x = localPlayer.position.x, y = localPlayer.position.y, z = localPlayer.position.z, r = 20 } ) and tocolor( 255, 255, 0 ) or tocolor( 0, 255, 255 ), 2 );
 
@@ -231,7 +231,7 @@ function Building.updatePreview( )
 		local x = process[ 2 ];
 		local y = process[ 3 ];
 		local z = process[ 4 ] + .15;
-		local r = -math.deg( math.atan2( x - localPlayer.position.x, y - localPlayer.position.y ) ) + ( Building.isWall( Building.preview_element.model ) and 90 or 0 );
+		local r = -deg( atan2( x - localPlayer.position.x, y - localPlayer.position.y ) ) + ( Building.isWall( Building.preview_element.model ) and 90 or 0 );
 
 		if ( isElement( process[ 5 ] ) ) then
 
@@ -288,10 +288,10 @@ function Building.getPosition( hit_element, type, target_pos )
 		local minSide = 1;
 		local minDistance = 999;
 
-		sides[ 1 ] = { x + ( math.cos( math.rad( hit_element.rotation.z ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( math.sin( math.rad( hit_element.rotation.z ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
-		sides[ 2 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 90 ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 90 ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
-		sides[ 3 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 180 ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 180 ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
-		sides[ 4 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 270 ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 270 ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
+		sides[ 1 ] = { x + ( cos( rad( hit_element.rotation.z ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( sin( rad( hit_element.rotation.z ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
+		sides[ 2 ] = { x + ( cos( rad( hit_element.rotation.z + 90 ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( sin( rad( hit_element.rotation.z + 90 ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
+		sides[ 3 ] = { x + ( cos( rad( hit_element.rotation.z + 180 ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( sin( rad( hit_element.rotation.z + 180 ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
+		sides[ 4 ] = { x + ( cos( rad( hit_element.rotation.z + 270 ) ) * Building.getRadius( hit_element.model, "top" ) ), y + ( sin( rad( hit_element.rotation.z + 270 ) ) * Building.getRadius( hit_element.model, "top" ) ), z, 0 };
 
 		for k, v in ipairs( sides ) do
 
@@ -313,10 +313,10 @@ function Building.getPosition( hit_element, type, target_pos )
 		local minSide = 1;
 		local minDistance = 999;
 
-		sides[ 1 ] = { x + ( math.cos( math.rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 180 };
-		sides[ 2 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 270 };
-		sides[ 3 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 0 };
-		sides[ 4 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 90 };
+		sides[ 1 ] = { x + ( cos( rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 180 };
+		sides[ 2 ] = { x + ( cos( rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 270 };
+		sides[ 3 ] = { x + ( cos( rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 0 };
+		sides[ 4 ] = { x + ( cos( rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 90 };
 	
 		for k, v in ipairs( sides ) do
 
@@ -338,8 +338,8 @@ function Building.getPosition( hit_element, type, target_pos )
 		local minSide = 1;
 		local minDistance = 999;
 
-		sides[ 1 ] = { x + ( math.cos( math.rad( hit_element.rotation.z ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), z + BUILDING_SIZES[ hit_element.model ].z - BUILDING_SIZES[ Building.preview_element.model ].z / 2, 0 };
-		sides[ 2 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), z + BUILDING_SIZES[ hit_element.model ].z - BUILDING_SIZES[ Building.preview_element.model ].z / 2, 0 };
+		sides[ 1 ] = { x + ( cos( rad( hit_element.rotation.z ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), z + BUILDING_SIZES[ hit_element.model ].z - BUILDING_SIZES[ Building.preview_element.model ].z / 2, 0 };
+		sides[ 2 ] = { x + ( cos( rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( Building.preview_element.model, "top" ) / 2 ) ), z + BUILDING_SIZES[ hit_element.model ].z - BUILDING_SIZES[ Building.preview_element.model ].z / 2, 0 };
 
 		for k, v in ipairs( sides ) do
 
@@ -361,10 +361,10 @@ function Building.getPosition( hit_element, type, target_pos )
 		local minAngle = 1;
 		local minDistance = 999;
 
-		angles[ 1 ] = { x + ( math.cos( math.rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 90 };
-		angles[ 2 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 180 };
-		angles[ 3 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 270 };
-		angles[ 4 ] = { x + ( math.cos( math.rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( math.sin( math.rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 0 };
+		angles[ 1 ] = { x + ( cos( rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 90 };
+		angles[ 2 ] = { x + ( cos( rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z + 90 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 180 };
+		angles[ 3 ] = { x + ( cos( rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z + 180 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 270 };
+		angles[ 4 ] = { x + ( cos( rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), y + ( sin( rad( hit_element.rotation.z + 270 ) ) * ( Building.getRadius( hit_element.model, "top" ) / 2 ) ), z, 0 };
 	
 		for k, v in ipairs( angles ) do
 
@@ -392,7 +392,7 @@ function Building.isWall( model )
 
 	for name, v in pairs( CUSTOM_MODELS ) do
 
-		if ( string.find( name, "Wall" ) and v.model == model ) then
+		if ( find( name, "Wall" ) and v.model == model ) then
 
 			return true;
 		
@@ -408,11 +408,11 @@ function Building.getRadius( model, rType )
 
 	if ( rType == "top" ) then
 
-		return math.sqrt( BUILDING_SIZES[ model ].x * BUILDING_SIZES[ model ].y );
+		return sqrt( BUILDING_SIZES[ model ].x * BUILDING_SIZES[ model ].y );
 
 	elseif ( rType == "height" ) then
 
-		return math.sqrt( BUILDING_SIZES[ model ].x * BUILDING_SIZES[ model ].z );
+		return sqrt( BUILDING_SIZES[ model ].x * BUILDING_SIZES[ model ].z );
 
 	end
 
