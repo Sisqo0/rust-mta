@@ -22,11 +22,11 @@ function UI.setup( )
 
 	triggerServerEvent( "onUIGenerated", localPlayer, localPlayer );
 
-	HUD.createNotification( "VERSÃO BETA", 4 );
+	HUD.createNotification( "BETA", 4 );
 
 	setTimer( function( )
 
-		HUD.createNotification( "VERSÃO BETA", 4 );
+		HUD.createNotification( "BETA", 4 );
 
 	end, 120000, 0 );
 
